@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahsaan Ali — US Tax Preparer & Bookkeeping Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #111111;
+  --bg-card-hover: #161616;
+  --border: #1a1a1a;
+  --border-light: #222222;
+  --text: #f5f5f3;
+  --text-muted: #888888;
+  --text-dim: #555555;
+  --accent: #c8ff00;
+  --accent-dim: #a5d400;
+  --white: #ffffff;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: var(--bg); }
+
+/* ======== UTILITY ======== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 100px 0; }
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.section-heading {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.section-heading em { font-style: italic; color: var(--accent); }
+
+/* ======== NAV ======== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 20px 0;
+  background: rgba(10,10,10,0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+nav .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: color 0.3s;
+  letter-spacing: 0.3px;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+  padding: 10px 24px !important;
+  border-radius: 100px;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  transition: all 0.3s !important;
+  letter-spacing: 0.3px;
+}
+.nav-cta:hover { opacity: 0.9; transform: scale(1.02); }
+
+/* ======== HERO ======== */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Canvas background */
+#tax-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle radial accent glow */
+.hero-glow {
+  position: absolute;
+  top: -200px; left: 50%; transform: translateX(-50%);
+  width: 700px; height: 500px;
+  background: radial-gradient(ellipse, rgba(200,255,0,0.045) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-avatar {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--border-light);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 28px;
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+.hero-avatar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(200,255,0,0.1), transparent);
+  border-radius: 50%;
+}
+.hero-greeting {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.hero-greeting span { color: var(--accent); }
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 28px;
+  max-width: 800px;
+  margin-left: auto; margin-right: auto;
+}
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.hero-cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+  padding: 14px 36px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+  letter-spacing: 0.3px;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,255,0,0.2); }
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  padding: 14px 36px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 1px solid var(--border-light);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-secondary:hover { border-color: var(--text-dim); background: rgba(255,255,255,0.03); }
+
+/* ======== CREDENTIALS MARQUEE ======== */
+.trust-bar {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0;
+  overflow: hidden;
+  position: relative;
+}
+.trust-bar::before, .trust-bar::after {
+  content: '';
+  position: absolute; top: 0; bottom: 0; width: 100px; z-index: 2;
+}
+.trust-bar::before { left: 0; background: linear-gradient(90deg, var(--bg), transparent); }
+.trust-bar::after  { right: 0; background: linear-gradient(-90deg, var(--bg), transparent); }
+.trust-track {
+  display: flex; gap: 60px; align-items: center;
+  animation: scroll-left 25s linear infinite;
+  width: max-content;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 10px;
+  white-space: nowrap;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.trust-item .trust-icon {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ======== STATS ======== */
+.stats { padding: 80px 0; }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.stat-card {
+  background: var(--bg);
+  padding: 40px 32px;
+  text-align: center;
+  position: relative;
+}
+.stat-index {
+  position: absolute;
+  top: 16px; right: 20px;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+.stat-number {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.stat-number span { color: var(--accent); }
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* ======== ABOUT ======== */
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-visual {
+  position: relative;
+  height: 500px;
+}
+.about-mockup {
+  position: absolute;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.23,1,0.32,1);
+}
+.about-mockup:hover { transform: translateY(-8px) scale(1.02); }
+.mockup-1 { width: 280px; top: 0; left: 0; z-index: 2; }
+.mockup-2 { width: 260px; top: 60px; right: 0; z-index: 1; }
+.mockup-3 { width: 240px; bottom: 0; left: 40px; z-index: 3; }
+.mockup-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 8px;
+}
+.mockup-dot { width: 8px; height: 8px; border-radius: 50%; }
+.mockup-dot.r { background: #ff5f57; }
+.mockup-dot.y { background: #febc2e; }
+.mockup-dot.g { background: #28c840; }
+.mockup-title { font-size: 0.7rem; color: var(--text-dim); margin-left: auto; font-weight: 500; }
+.mockup-body { padding: 20px; }
+.mockup-line {
+  height: 8px;
+  background: var(--border-light);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.mockup-line.short  { width: 60%; }
+.mockup-line.medium { width: 80%; }
+.mockup-line.accent { background: rgba(200,255,0,0.15); }
+.mockup-form-row { display: flex; gap: 8px; margin-bottom: 10px; }
+.mockup-field {
+  flex: 1; height: 28px;
+  background: var(--border);
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+}
+.mockup-badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  background: rgba(200,255,0,0.1);
+  border: 1px solid rgba(200,255,0,0.2);
+  border-radius: 4px;
+  font-size: 0.65rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 8px;
+}
+.about-text p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+.about-highlight {
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-top: 32px;
+}
+.about-highlight-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0;
+}
+.about-highlight-row:not(:last-child) { border-bottom: 1px solid var(--border); }
+.about-check {
+  width: 20px; height: 20px;
+  background: rgba(200,255,0,0.1);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.about-check svg { width: 10px; height: 10px; }
+.about-highlight-row span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* ======== SERVICES ======== */
+.services { position: relative; }
+.services::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+}
+.services-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 64px;
+}
+.services-header p { color: var(--text-muted); font-size: 0.95rem; font-weight: 300; line-height: 1.7; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 28px;
+  transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+.service-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-light);
+  transform: translateY(-4px);
+}
+.service-icon {
+  width: 48px; height: 48px;
+  background: rgba(200,255,0,0.06);
+  border: 1px solid rgba(200,255,0,0.12);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+}
+.service-card h3 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.service-card p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.service-tag {
+  padding: 4px 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+/* ======== PROCESS ======== */
+.process { position: relative; }
+.process-header { text-align: center; max-width: 550px; margin: 0 auto 72px; }
+.process-header p { color: var(--text-muted); font-size: 0.95rem; font-weight: 300; }
+.process-flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.process-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 0 16px;
+}
+.process-node {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--border-light);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--accent);
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s;
+}
+.process-step:hover .process-node {
+  border-color: var(--accent);
+  background: rgba(200,255,0,0.05);
+  transform: scale(1.08);
+}
+.process-connector {
+  position: absolute;
+  top: 36px;
+  left: calc(50% + 36px);
+  right: calc(-50% + 36px);
+  height: 2px;
+  background: var(--border-light);
+  z-index: 1;
+}
+.process-connector::after {
+  content: '';
+  position: absolute;
+  right: -4px; top: -3px;
+  width: 8px; height: 8px;
+  border-right: 2px solid var(--text-dim);
+  border-top: 2px solid var(--text-dim);
+  transform: rotate(45deg);
+}
+.process-step h4 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.process-step p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+/* ======== TESTIMONIAL ======== */
+.testimonial { text-align: center; position: relative; }
+.testimonial-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 60px 48px;
+  position: relative;
+}
+.testimonial-card::before {
+  content: '"';
+  font-family: var(--serif);
+  font-size: 8rem;
+  color: rgba(200,255,0,0.08);
+  position: absolute;
+  top: -10px; left: 40px;
+  line-height: 1;
+}
+.testimonial-story {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+.testimonial-numbers {
+  display: flex; justify-content: center; gap: 48px;
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border);
+}
+.testimonial-num { text-align: center; }
+.testimonial-num .big {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.testimonial-num .small {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.testimonial-quote {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.testimonial-author {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+/* ======== WHY ME ======== */
+.why-me { position: relative; }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.why-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 32px;
+  display: flex; gap: 20px; align-items: flex-start;
+  transition: all 0.3s;
+}
+.why-card:hover { background: var(--bg-card-hover); transform: translateY(-2px); }
+.why-icon {
+  width: 44px; height: 44px;
+  background: rgba(200,255,0,0.06);
+  border: 1px solid rgba(200,255,0,0.12);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+.why-card h4 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.why-card p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* ======== TOOLS ======== */
+.tools { text-align: center; }
+.tools-header { max-width: 500px; margin: 0 auto 48px; }
+.tools-header p { color: var(--text-muted); font-size: 0.9rem; font-weight: 300; }
+.tools-grid {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 12px; max-width: 700px; margin: 0 auto;
+}
+.tool-chip {
+  padding: 12px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  display: flex; align-items: center; gap: 8px;
+  transition: all 0.3s;
+}
+.tool-chip:hover { border-color: var(--border-light); color: var(--text); transform: translateY(-2px); }
+.tool-chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+/* ======== CTA ======== */
+.cta { text-align: center; position: relative; overflow: hidden; }
+.cta::before {
+  content: '';
+  position: absolute;
+  bottom: -200px; left: 50%; transform: translateX(-50%);
+  width: 800px; height: 400px;
+  background: radial-gradient(circle, rgba(200,255,0,0.04) 0%, transparent 70%);
+}
+.cta-box { max-width: 680px; margin: 0 auto; position: relative; }
+.cta-box h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+.cta-box h2 em { font-style: italic; color: var(--accent); }
+.cta-box p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 40px; font-weight: 300; }
+.cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.cta-free { margin-top: 20px; font-size: 0.78rem; color: var(--text-dim); }
+.cta-free span { color: var(--accent); }
+
+/* ======== FOOTER ======== */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 48px 0 32px;
+}
+.footer-top {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 48px; flex-wrap: wrap; gap: 32px;
+}
+.footer-brand p {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  max-width: 300px;
+  line-height: 1.7;
+  margin-top: 12px;
+  font-weight: 300;
+}
+.footer-cols { display: flex; gap: 80px; }
+.footer-col h5 {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.footer-col a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--text); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-bottom p { font-size: 0.75rem; color: var(--text-dim); font-weight: 300; }
+.footer-bottom a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: color 0.3s;
+}
+.footer-bottom a:hover { color: var(--text-muted); }
+.footer-legal { display: flex; gap: 24px; }
+
+/* ======== PORTFOLIO MOCKUPS ======== */
+.portfolio { position: relative; overflow: hidden; }
+.portfolio-header { text-align: center; max-width: 600px; margin: 0 auto 72px; }
+.portfolio-header p.desc { color: var(--text-muted); font-size: 0.95rem; font-weight: 300; line-height: 1.7; }
+
+.mockup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px 24px;
+  align-items: start;
+  justify-items: center;
+}
+.mockup-grid > *:nth-child(n+4) { margin-top: 32px; }
+
+.iso-scene { display: flex; flex-direction: column; align-items: center; }
+
+.iso-wrap {
+  position: relative;
+  width: 290px; height: 375px;
+  transform-style: preserve-3d;
+  transform: perspective(1100px) rotateX(8deg) rotateY(-26deg) rotateZ(1deg);
+  animation: isoFloat 5.5s ease-in-out infinite;
+}
+.iso-scene:nth-child(1) .iso-wrap { animation-delay: 0s; }
+.iso-scene:nth-child(2) .iso-wrap { animation-delay: 1s; }
+.iso-scene:nth-child(3) .iso-wrap { animation-delay: 0.5s; }
+.iso-scene:nth-child(4) .iso-wrap { animation-delay: 1.8s; }
+.iso-scene:nth-child(5) .iso-wrap { animation-delay: 0.3s; }
+.iso-scene:nth-child(6) .iso-wrap { animation-delay: 1.4s; }
+
+@keyframes isoFloat {
+  0%, 100% { transform: perspective(1100px) rotateX(8deg) rotateY(-26deg) rotateZ(1deg) translateY(0); }
+  50%       { transform: perspective(1100px) rotateX(8deg) rotateY(-26deg) rotateZ(1deg) translateY(-10px); }
+}
+
+.iso-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: -44px; left: 8%; width: 84%; height: 32px;
+  background: radial-gradient(ellipse, rgba(0,0,0,0.55) 0%, transparent 72%);
+  transform: rotateX(-90deg) translateZ(-38px);
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.iso-bp { position: absolute; inset: 0; border: 0.5px solid #bbb; }
+.iso-bp1 { transform: translate3d(7px,-5px,-8px); background: #ebebeb; }
+.iso-bp2 { transform: translate3d(14px,-10px,-16px); background: #e2e2e2; }
+
+.iso-face {
+  position: absolute; inset: 0;
+  background: #fff;
+  border: 0.5px solid #afafaf;
+  overflow: hidden;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.12), 0 0 28px rgba(0,0,0,0.22);
+}
+
+.iso-edge-r {
+  position: absolute; top: 0; left: 100%;
+  width: 18px; height: 100%;
+  transform: rotateY(90deg);
+  transform-origin: left center;
+  background: repeating-linear-gradient(to bottom,
+    #fff 0, #fff 3px, #d5d5d5 3px, #d5d5d5 4px,
+    #ededed 4px, #ededed 7px, #c5c5c5 7px, #c5c5c5 8px,
+    #e8e8e8 8px, #e8e8e8 11px, #cecece 11px, #cecece 12px);
+  border-top: 0.5px solid #b8b8b8;
+  border-right: 0.5px solid #a8a8a8;
+  border-bottom: 0.5px solid #b8b8b8;
+}
+
+.iso-edge-b {
+  position: absolute; top: 100%; left: 0;
+  width: 100%; height: 12px;
+  transform: rotateX(-90deg);
+  transform-origin: top center;
+  background: linear-gradient(to bottom, #d0d0d0, #aaa);
+  border-bottom: 0.5px solid #999;
+}
+
+/* document internals */
+.d-head {
+  display: flex; align-items: stretch;
+  border-bottom: 2px solid #000;
+  height: 42px;
+}
+.d-head-left {
+  flex: 1; padding: 4px 7px;
+  border-right: 1px solid #000;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.d-agency {
+  font-family: var(--sans);
+  font-size: 5px; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: #000; line-height: 1.5;
+}
+.d-head-right {
+  width: 90px; padding: 4px 6px;
+  display: flex; flex-direction: column;
+  align-items: flex-end; justify-content: center; gap: 1px;
+}
+.d-fnum { font-family: var(--sans); font-weight: 700; line-height: 1; color: #000; }
+.d-omb  { font-family: 'DM Sans', monospace; font-size: 4.5px; color: #555; }
+.d-yr   { font-family: var(--sans); font-size: 10px; font-weight: 700; color: #000; letter-spacing: 0.04em; }
+
+.d-titlebar {
+  background: #111; color: #fff;
+  font-family: var(--sans);
+  font-size: 6.5px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  text-align: center; padding: 3px 5px;
+}
+
+.d-sec { border-bottom: 1px solid #000; }
+.d-slbl {
+  background: #f0f0f0; border-bottom: 0.5px solid #aaa;
+  padding: 2px 6px;
+  font-family: var(--sans);
+  font-size: 5.5px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #000;
+}
+
+.d-fr {
+  display: flex;
+  border-bottom: 0.5px solid #e0e0e0;
+  min-height: 14px; align-items: stretch;
+}
+.d-fr:last-child { border-bottom: none; }
+.d-fn {
+  width: 18px; flex-shrink: 0;
+  border-right: 0.5px solid #ccc;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--sans); font-size: 5px; color: #777; padding: 1px;
+}
+.d-fl {
+  flex: 1; padding: 2px 4px;
+  border-right: 0.5px solid #ccc;
+  display: flex; align-items: center;
+  font-family: var(--sans);
+  font-size: 6.5px; color: #222;
+  font-weight: 400; line-height: 1.3;
+}
+.d-fv {
+  width: 74px; flex-shrink: 0;
+  padding: 2px 5px 2px 3px;
+  display: flex; align-items: center; justify-content: flex-end;
+  font-family: var(--sans);
+  font-size: 7.5px; color: #000; font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.d-fv.b { font-weight: 700; font-size: 8.5px; }
+.d-fr.hl  { background: #f8f8f8; }
+.d-fr.rl  { background: #ededed; border-bottom: 1.5px solid #000; }
+.d-fr.sub .d-fl { padding-left: 12px; font-size: 6px; color: #555; }
+.d-fr.sub { background: #fafafa; }
+.d-fr.fin { background: #141414; border-bottom: 0; min-height: 19px; }
+.d-fr.fin .d-fl  { color: #fff; font-weight: 600; font-size: 7px; }
+.d-fr.fin .d-fv  { color: #fff; font-size: 10px; font-weight: 700; }
+.d-fr.fin .d-fn  { color: #666; border-right-color: #333; }
+
+.d-nb { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid #ccc; }
+.d-nc { padding: 2px 6px; border-right: 0.5px solid #ccc; }
+.d-nc:last-child { border-right: none; }
+.d-nclbl { font-family: var(--sans); font-size: 5px; color: #999; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 1px; }
+.d-ncval { font-family: var(--sans); font-size: 7px; color: #000; font-weight: 600; }
+
+.d-fw {
+  display: flex; align-items: center;
+  border-bottom: 0.5px solid #ccc;
+  padding: 2px 6px; gap: 4px; min-height: 12px;
+}
+.d-fwl { flex: 1; font-family: var(--sans); font-size: 6px; color: #555; }
+.d-fwv { font-family: var(--sans); font-size: 6.5px; color: #000; font-weight: 500; }
+
+.d-sr { display: flex; align-items: center; gap: 8px; padding: 2px 6px; border-bottom: 0.5px solid #ccc; }
+.d-si { display: flex; align-items: center; gap: 2px; font-family: var(--sans); font-size: 6px; color: #333; }
+.d-cb { width: 8px; height: 8px; border: 1px solid #777; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 6px; line-height: 1; }
+.d-cb.on { background: #000; color: #fff; font-weight: 700; border-color: #000; }
+
+.d-tcr { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid #ddd; }
+.d-tcc { padding: 2px 6px; border-right: 0.5px solid #ddd; display: flex; flex-direction: column; justify-content: center; }
+.d-tcc:last-child { border-right: none; }
+.d-tcc.full { grid-column: 1 / -1; }
+.d-tcl { font-size: 5px; font-family: var(--sans); color: #999; text-transform: uppercase; letter-spacing: 0.06em; }
+.d-tcv { font-family: var(--sans); font-size: 7.5px; font-weight: 600; color: #000; }
+
+.d-pctr { display: flex; border-bottom: 0.5px solid #ccc; }
+.d-pcc { flex: 1; padding: 2px 6px; border-right: 0.5px solid #ccc; }
+.d-pcc:last-child { border-right: none; }
+.d-pcl { font-size: 5px; font-family: var(--sans); color: #999; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1px; }
+.d-pcv { font-family: var(--sans); font-size: 7.5px; font-weight: 700; color: #000; }
+
+.d-k1b { background: #f5f5f5; border-bottom: 1px solid #ccc; padding: 3px 6px; }
+.d-k1n { font-family: var(--sans); font-size: 8px; font-weight: 700; color: #000; letter-spacing: 0.04em; }
+.d-k1s { font-family: var(--sans); font-size: 5px; color: #777; margin-top: 1px; }
+
+.d-ftr { padding: 2px 6px; border-top: 1px solid #000; display: flex; justify-content: space-between; align-items: center; }
+.d-ftrl { font-family: var(--sans); font-size: 5px; color: #666; letter-spacing: 0.05em; text-transform: uppercase; }
+.d-ftrp { font-family: var(--sans); font-size: 6px; color: #000; }
+
+.iso-label { margin-top: 24px; text-align: center; }
+.iso-label-form { font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 4px; }
+.iso-label-name { font-family: var(--serif); font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.78); letter-spacing: 0.02em; }
+.iso-label-det  { font-family: var(--sans); font-size: 0.55rem; color: var(--text-dim); margin-top: 4px; letter-spacing: 0.3px; }
+
+/* ======== SCROLL ANIMATIONS ======== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.23,1,0.32,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .about .container { grid-template-columns: 1fr; gap: 48px; }
+  .about-visual { height: 400px; }
+  .mockup-grid { grid-template-columns: repeat(2, 1fr); }
+  .mockup-grid > *:nth-child(n+4) { margin-top: 0; }
+}
+@media (max-width: 768px) {
+  .section { padding: 72px 0; }
+  .nav-links { display: none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .process-flow { flex-direction: column; align-items: center; gap: 24px; }
+  .process-connector { display: none; }
+  .hero h1 { letter-spacing: -1px; }
+  .footer-cols { gap: 40px; }
+  .footer-top { flex-direction: column; }
+  .about-visual { height: 320px; }
+  .mockup-1 { width: 220px; }
+  .mockup-2 { width: 200px; right: -10px; }
+  .mockup-3 { width: 180px; }
+  .testimonial-card { padding: 40px 28px; }
+  .testimonial-numbers { gap: 24px; }
+  .mockup-grid { grid-template-columns: 1fr; gap: 64px 0; }
+  .iso-wrap { width: 260px; height: 336px; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat-card { padding: 28px 20px; }
+  .hero-cta-group { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav>
+  <div class="container">
+    <a href="#" class="nav-logo">Ahsaan<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#process">Process</a>
+      <a href="#why">Why Me</a>
+      <a href="#contact" class="nav-cta">Free Consultation →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="home">
+
+  <!-- Professional canvas: floating tax data stream -->
+  <canvas id="tax-canvas"></canvas>
+  <!-- Subtle accent glow -->
+  <div class="hero-glow"></div>
+
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="hero-avatar">A</div>
+    <p class="hero-greeting">Hi, I'm Ahsaan Ali <span>✦</span></p>
+    <h1>Stop overpaying. Start <em>filing right.</em></h1>
+    <p class="hero-sub">IRS-registered tax professional for individuals, S-Corps, and C-Corps. I handle your returns, bookkeeping, and IRS problems personally. One person. One point of contact. That's it.</p>
+    <div class="hero-cta-group">
+      <a href="#contact" class="btn-primary">
+        <span>Get Your Free Review</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" class="btn-secondary">
+        <span>View Services</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TRUST BAR ==================== -->
+<div class="trust-bar">
+  <div class="trust-track">
+    <div class="trust-item"><div class="trust-icon">⚡</div>EFIN Holder (ERO)</div>
+    <div class="trust-item"><div class="trust-icon">✓</div>Active PTIN</div>
+    <div class="trust-item"><div class="trust-icon">★</div>IRS AFSP Certified</div>
+    <div class="trust-item"><div class="trust-icon">◆</div>NYTPRIN Registered</div>
+    <div class="trust-item"><div class="trust-icon">⬡</div>Drake Tax</div>
+    <div class="trust-item"><div class="trust-icon">◉</div>QuickBooks</div>
+    <div class="trust-item"><div class="trust-icon">▣</div>Tax ProLink</div>
+    <div class="trust-item"><div class="trust-icon">△</div>Wave</div>
+    <div class="trust-item"><div class="trust-icon">◈</div>Zoho Books</div>
+    <!-- duplicate for seamless loop -->
+    <div class="trust-item"><div class="trust-icon">⚡</div>EFIN Holder (ERO)</div>
+    <div class="trust-item"><div class="trust-icon">✓</div>Active PTIN</div>
+    <div class="trust-item"><div class="trust-icon">★</div>IRS AFSP Certified</div>
+    <div class="trust-item"><div class="trust-icon">◆</div>NYTPRIN Registered</div>
+    <div class="trust-item"><div class="trust-icon">⬡</div>Drake Tax</div>
+    <div class="trust-item"><div class="trust-icon">◉</div>QuickBooks</div>
+    <div class="trust-item"><div class="trust-icon">▣</div>Tax ProLink</div>
+    <div class="trust-item"><div class="trust-icon">△</div>Wave</div>
+    <div class="trust-item"><div class="trust-icon">◈</div>Zoho Books</div>
+  </div>
+</div>
+
+<!-- ==================== STATS ==================== -->
+<section class="stats section reveal">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-index">[01]</span>
+        <div class="stat-number">$13K<span>→</span>$0</div>
+        <div class="stat-label">Client was told they owed $13K. I found the errors. They got a refund instead.</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-index">[02]</span>
+        <div class="stat-number">1<span>:</span>1</div>
+        <div class="stat-label">You talk to me. Not a receptionist. Not a junior associate. Me.</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-index">[03]</span>
+        <div class="stat-number">365<span>d</span></div>
+        <div class="stat-label">Available year-round. Not just from January to April.</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-index">[04]</span>
+        <div class="stat-number">6<span>+</span></div>
+        <div class="stat-label">Entity types covered, from W-2 earners to C-Corps.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ABOUT ==================== -->
+<section class="about section reveal" id="about">
+  <div class="container">
+    <div class="about-visual">
+      <div class="about-mockup mockup-1">
+        <div class="mockup-header">
+          <div class="mockup-dot r"></div>
+          <div class="mockup-dot y"></div>
+          <div class="mockup-dot g"></div>
+          <span class="mockup-title">Form 1040</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-line medium"></div>
+          <div class="mockup-line short"></div>
+          <div class="mockup-form-row"><div class="mockup-field"></div><div class="mockup-field"></div></div>
+          <div class="mockup-form-row"><div class="mockup-field"></div><div class="mockup-field"></div></div>
+          <div class="mockup-line accent"></div>
+          <div class="mockup-badge">✓ E-Filed</div>
+        </div>
+      </div>
+      <div class="about-mockup mockup-2">
+        <div class="mockup-header">
+          <div class="mockup-dot r"></div>
+          <div class="mockup-dot y"></div>
+          <div class="mockup-dot g"></div>
+          <span class="mockup-title">1120-S · S-Corp</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-line short"></div>
+          <div class="mockup-line medium"></div>
+          <div class="mockup-form-row"><div class="mockup-field"></div></div>
+          <div class="mockup-line"></div>
+          <div class="mockup-line accent short"></div>
+          <div class="mockup-badge">K-1 Ready</div>
+        </div>
+      </div>
+      <div class="about-mockup mockup-3">
+        <div class="mockup-header">
+          <div class="mockup-dot r"></div>
+          <div class="mockup-dot y"></div>
+          <div class="mockup-dot g"></div>
+          <span class="mockup-title">1120 · C-Corp</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-line"></div>
+          <div class="mockup-form-row"><div class="mockup-field"></div><div class="mockup-field"></div></div>
+          <div class="mockup-line accent medium"></div>
+          <div class="mockup-line short"></div>
+          <div class="mockup-badge">Reviewed</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <p class="section-label">About Me</p>
+      <h2 class="section-heading">I do your taxes <em>myself.</em> And I get them right.</h2>
+      <p>Most firms pass your file through three people before it gets filed. Here, I'm the only person who touches it. I prepare federal and state returns for individuals, freelancers, LLCs, S-Corps, C-Corps, and partnerships. I also clean up messy books and get your financials filing-ready.</p>
+      <p>When you call, I pick up. When you have a question, I answer it. There is no layer between you and the person doing your taxes.</p>
+      <div class="about-highlight">
+        <div class="about-highlight-row">
+          <div class="about-check"><svg viewBox="0 0 24 24" fill="none" stroke="#c8ff00" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+          <span>EFIN Holder: authorized to e-file federal returns directly</span>
+        </div>
+        <div class="about-highlight-row">
+          <div class="about-check"><svg viewBox="0 0 24 24" fill="none" stroke="#c8ff00" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+          <span>Active PTIN: verifiable on the IRS directory</span>
+        </div>
+        <div class="about-highlight-row">
+          <div class="about-check"><svg viewBox="0 0 24 24" fill="none" stroke="#c8ff00" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+          <span>IRS AFSP certified: continuing education and filing authorization</span>
+        </div>
+        <div class="about-highlight-row">
+          <div class="about-check"><svg viewBox="0 0 24 24" fill="none" stroke="#c8ff00" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+          <span>NYTPRIN registered: New York State tax preparer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="services section reveal" id="services">
+  <div class="container">
+    <div class="services-header">
+      <p class="section-label">Services</p>
+      <h2 class="section-heading">One person for <em>all of it.</em></h2>
+      <p>Personal returns. Business filings. Messy books. IRS letters. Clear pricing, upfront. No surprises on the invoice.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>Tax Preparation</h3>
+        <p>Individual and business returns, filed accurately the first time. Federal, state, and amended returns for every entity type I work with.</p>
+        <div class="service-tags">
+          <span class="service-tag">1040</span>
+          <span class="service-tag">1040-NR</span>
+          <span class="service-tag">Schedule C</span>
+          <span class="service-tag">1120-S</span>
+          <span class="service-tag">1120</span>
+          <span class="service-tag">1065</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Bookkeeping & QuickBooks</h3>
+        <p>Monthly bookkeeping, catch-up cleanups, bank reconciliations, and financial statements. Whether you need filing-ready books or lender-ready reports.</p>
+        <div class="service-tags">
+          <span class="service-tag">Monthly</span>
+          <span class="service-tag">Cleanup</span>
+          <span class="service-tag">Reconciliation</span>
+          <span class="service-tag">QBO Setup</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏛️</div>
+        <h3>IRS & ITIN Services</h3>
+        <p>ITIN applications, EIN registration, IRS notice responses, and full filing support for clients without an SSN. I handle the IRS so you don't have to.</p>
+        <div class="service-tags">
+          <span class="service-tag">ITIN (W-7)</span>
+          <span class="service-tag">EIN</span>
+          <span class="service-tag">IRS Notices</span>
+          <span class="service-tag">No SSN Filing</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧭</div>
+        <h3>Business Tax Planning</h3>
+        <p>Quarterly estimates, entity structure advice, year-end reviews, and ongoing compliance. So nothing catches you off guard at filing time.</p>
+        <div class="service-tags">
+          <span class="service-tag">Estimates</span>
+          <span class="service-tag">Entity Structure</span>
+          <span class="service-tag">Year-End</span>
+          <span class="service-tag">Compliance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROCESS ==================== -->
+<section class="process section reveal" id="process">
+  <div class="container">
+    <div class="process-header">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-heading">Four steps. <em>Zero confusion.</em></h2>
+      <p>Simple, honest, and fast.</p>
+    </div>
+    <div class="process-flow">
+      <div class="process-step">
+        <div class="process-node">01</div>
+        <div class="process-connector"></div>
+        <h4>Free Consultation</h4>
+        <p>Tell me what's going on. I'll review your last return or your books at no cost.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-node">02</div>
+        <div class="process-connector"></div>
+        <h4>Scope & Pricing</h4>
+        <p>You get a clear fee before I start. No hidden charges. No scope creep.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-node">03</div>
+        <div class="process-connector"></div>
+        <h4>Preparation</h4>
+        <p>I prepare your return or clean up your books. You get updates along the way, not silence.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-node">04</div>
+        <h4>Review & File</h4>
+        <p>You review everything before it's filed. Once you approve, I e-file it. Done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIAL ==================== -->
+<section class="testimonial section reveal" id="results">
+  <div class="container">
+    <p class="section-label">Client Result</p>
+    <h2 class="section-heading" style="text-align:center;margin-bottom:48px;">This is the kind of difference <em>one careful review</em> can make.</h2>
+    <div class="testimonial-card">
+      <p class="testimonial-story">A client came to me after a big-name firm told him he owed $13,000. I pulled the return apart line by line. Found major errors the original preparer missed. Corrected the filing. His liability dropped to zero, and he walked away with a refund he never expected.</p>
+      <div class="testimonial-numbers">
+        <div class="testimonial-num">
+          <div class="big">$13K</div>
+          <div class="small">Owed (Before)</div>
+        </div>
+        <div class="testimonial-num">
+          <div class="big" style="font-size:2rem;">→</div>
+          <div class="small">&nbsp;</div>
+        </div>
+        <div class="testimonial-num">
+          <div class="big">$0</div>
+          <div class="small">Owed (After)</div>
+        </div>
+        <div class="testimonial-num">
+          <div class="big">+Refund</div>
+          <div class="small">Received</div>
+        </div>
+      </div>
+      <p class="testimonial-quote">"From now on, you will be my tax professional forever."</p>
+      <p class="testimonial-author">— Satisfied Client</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PORTFOLIO ==================== -->
+<section class="portfolio section reveal" id="portfolio">
+  <div class="container">
+    <div class="portfolio-header">
+      <p class="section-label">Sample Work</p>
+      <h2 class="section-heading">Real returns. <em>Real results.</em></h2>
+      <p class="desc">A look at actual filings I prepare for clients across individuals, sole proprietors, and S-Corps. Names and numbers have been changed for privacy.</p>
+    </div>
+
+    <div class="mockup-grid">
+
+      <!-- 1. FORM 1040 -->
+      <div class="iso-scene">
+        <div class="iso-wrap">
+          <div class="iso-bp iso-bp2"></div>
+          <div class="iso-bp iso-bp1"></div>
+          <div class="iso-face">
+            <div class="d-head">
+              <div class="d-head-left"><div class="d-agency">Department of the Treasury<br>Internal Revenue Service</div></div>
+              <div class="d-head-right"><div class="d-fnum" style="font-size:19px;">1040</div><div class="d-omb">OMB No. 1545-0074</div></div>
+            </div>
+            <div class="d-titlebar">U.S. Individual Income Tax Return · 2024</div>
+            <div class="d-sec">
+              <div class="d-slbl">Filing Status</div>
+              <div class="d-sr">
+                <div class="d-si"><div class="d-cb"></div> Single</div>
+                <div class="d-si"><div class="d-cb on">✓</div> MFJ</div>
+                <div class="d-si"><div class="d-cb"></div> MFS</div>
+                <div class="d-si"><div class="d-cb"></div> HOH</div>
+              </div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Taxpayer Information</div>
+              <div class="d-nb">
+                <div class="d-nc"><div class="d-nclbl">Your Name</div><div class="d-ncval">Smith JOHNSON</div></div>
+                <div class="d-nc"><div class="d-nclbl">SSN</div><div class="d-ncval">489-30-XXXX</div></div>
+              </div>
+              <div class="d-nb">
+                <div class="d-nc"><div class="d-nclbl">Spouse's Name</div><div class="d-ncval">Micheal Johnson</div></div>
+                <div class="d-nc"><div class="d-nclbl">Spouse SSN</div><div class="d-ncval">987-65-XXXX</div></div>
+              </div>
+              <div class="d-fw"><span class="d-fwl">Home Address</span><span class="d-fwv" style="font-size:6px;">2458 Maple Ridge River, Orlando FL 32819</span></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Income</div>
+              <div class="d-fr"><div class="d-fn">1a</div><div class="d-fl">Total wages, salaries, tips (W-2)</div><div class="d-fv">72,000</div></div>
+              <div class="d-fr"><div class="d-fn">8</div><div class="d-fl">Additional income (Schedule 1)</div><div class="d-fv">71,800</div></div>
+              <div class="d-fr rl"><div class="d-fn">9</div><div class="d-fl">Total Income</div><div class="d-fv b">143,800</div></div>
+              <div class="d-fr"><div class="d-fn">10</div><div class="d-fl">Adjustments (Sch. 1 / SE Tax)</div><div class="d-fv">(5,073)</div></div>
+              <div class="d-fr hl"><div class="d-fn">11</div><div class="d-fl">Adjusted Gross Income (AGI)</div><div class="d-fv b">138,727</div></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Deductions &amp; Taxable Income</div>
+              <div class="d-fr"><div class="d-fn">12</div><div class="d-fl">Standard Deduction (MFJ)</div><div class="d-fv">(29,200)</div></div>
+              <div class="d-fr"><div class="d-fn">13</div><div class="d-fl">QBI Deduction (Form 8995)</div><div class="d-fv">(13,345)</div></div>
+              <div class="d-fr rl"><div class="d-fn">15</div><div class="d-fl">Taxable Income</div><div class="d-fv b">96,182</div></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Tax &amp; Payments</div>
+              <div class="d-fr"><div class="d-fn">16</div><div class="d-fl">Federal Income Tax</div><div class="d-fv">11,265</div></div>
+              <div class="d-fr"><div class="d-fn">23</div><div class="d-fl">Self-Employment Tax</div><div class="d-fv">10,145</div></div>
+              <div class="d-fr hl"><div class="d-fn">24</div><div class="d-fl">Total Tax</div><div class="d-fv b">20,910</div></div>
+              <div class="d-fr"><div class="d-fn">25d</div><div class="d-fl">Total Withholding &amp; Payments</div><div class="d-fv">24,110</div></div>
+            </div>
+            <div class="d-fr fin"><div class="d-fn">35a</div><div class="d-fl">Amount Refunded to You</div><div class="d-fv b">$ 3,200</div></div>
+            <div class="d-ftr"><div class="d-ftrl">Preparer: Ahsaan Ali · PTIN Active</div><div class="d-ftrp">P12345678</div></div>
+          </div>
+          <div class="iso-edge-r"></div>
+          <div class="iso-edge-b"></div>
+        </div>
+        <div class="iso-label">
+          <div class="iso-label-form">Form 1040 · 2024</div>
+          <div class="iso-label-name">Smith &amp; Micheal Johnson</div>
+          <div class="iso-label-det">MFJ · Orlando FL · Federal Refund $3,200</div>
+        </div>
+      </div>
+
+      <!-- 2. SCHEDULE C -->
+      <div class="iso-scene">
+        <div class="iso-wrap">
+          <div class="iso-bp iso-bp2"></div>
+          <div class="iso-bp iso-bp1"></div>
+          <div class="iso-face">
+            <div class="d-head">
+              <div class="d-head-left"><div class="d-agency">Department of the Treasury<br>Internal Revenue Service</div></div>
+              <div class="d-head-right">
+                <div class="d-fnum" style="font-size:11px;">SCHEDULE C</div>
+                <div style="font-family:var(--sans);font-size:7px;color:#444;text-align:right;">(Form 1040)</div>
+                <div class="d-omb">OMB No. 1545-0074</div>
+              </div>
+            </div>
+            <div class="d-titlebar">Profit or Loss From Business · 2024</div>
+            <div class="d-sec">
+              <div class="d-slbl">Business Information</div>
+              <div class="d-tcr"><div class="d-tcc full"><div class="d-tcl">Business Name</div><div class="d-tcv" style="font-size:9px;font-weight:700;">Turner Home Remodeling</div></div></div>
+              <div class="d-tcr">
+                <div class="d-tcc"><div class="d-tcl">Proprietor</div><div class="d-tcv">Smith JOHNSON</div></div>
+                <div class="d-tcc"><div class="d-tcl">SSN</div><div class="d-tcv">489-30-XXXX</div></div>
+              </div>
+              <div class="d-tcr">
+                <div class="d-tcc"><div class="d-tcl">Principal Activity</div><div class="d-tcv">Service</div></div>
+                <div class="d-tcc"><div class="d-tcl">Activity Code</div><div class="d-tcv">236100</div></div>
+              </div>
+              <div class="d-fw"><span class="d-fwl">Business Address</span><span class="d-fwv" style="font-size:6px;">2458 Maple Ridge River, Orlando FL 32819</span></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Part I — Income</div>
+              <div class="d-fr"><div class="d-fn">1</div><div class="d-fl">Gross receipts or sales</div><div class="d-fv">100,000</div></div>
+              <div class="d-fr"><div class="d-fn">2</div><div class="d-fl">Returns and allowances</div><div class="d-fv">0</div></div>
+              <div class="d-fr rl"><div class="d-fn">7</div><div class="d-fl">Gross income</div><div class="d-fv b">100,000</div></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Part II — Expenses</div>
+              <div class="d-fr"><div class="d-fn">8</div><div class="d-fl">Advertising</div><div class="d-fv">3,500</div></div>
+              <div class="d-fr"><div class="d-fn">9</div><div class="d-fl">Car and truck expenses</div><div class="d-fv">7,200</div></div>
+              <div class="d-fr"><div class="d-fn">11</div><div class="d-fl">Contract labor</div><div class="d-fv">12,500</div></div>
+              <div class="d-fr"><div class="d-fn">17</div><div class="d-fl">Legal &amp; professional</div><div class="d-fv">400</div></div>
+              <div class="d-fr"><div class="d-fn">22</div><div class="d-fl">Supplies</div><div class="d-fv">700</div></div>
+              <div class="d-fr"><div class="d-fn">25</div><div class="d-fl">Utilities</div><div class="d-fv">2,400</div></div>
+              <div class="d-fr"><div class="d-fn">26</div><div class="d-fl">Wages (less credits)</div><div class="d-fv">1,500</div></div>
+              <div class="d-fr rl"><div class="d-fn">28</div><div class="d-fl">Total expenses</div><div class="d-fv b">28,200</div></div>
+            </div>
+            <div class="d-fr fin"><div class="d-fn">31</div><div class="d-fl">Net Profit → Schedule 1</div><div class="d-fv b">$ 71,800</div></div>
+            <div class="d-ftr"><div class="d-ftrl">Attached to 1040 · Smith Johnson · 489-30-XXXX</div><div class="d-ftrp">Seq. 09</div></div>
+          </div>
+          <div class="iso-edge-r"></div>
+          <div class="iso-edge-b"></div>
+        </div>
+        <div class="iso-label">
+          <div class="iso-label-form">Schedule C · 2024</div>
+          <div class="iso-label-name">Turner Home Remodeling</div>
+          <div class="iso-label-det">Net Profit $71,800 · Code 236100</div>
+        </div>
+      </div>
+
+      <!-- 3. FORM 1120-S -->
+      <div class="iso-scene">
+        <div class="iso-wrap">
+          <div class="iso-bp iso-bp2"></div>
+          <div class="iso-bp iso-bp1"></div>
+          <div class="iso-face">
+            <div class="d-head">
+              <div class="d-head-left"><div class="d-agency">Department of the Treasury<br>Internal Revenue Service</div></div>
+              <div class="d-head-right">
+                <div class="d-fnum" style="font-size:13px;">1120-S</div>
+                <div class="d-omb">OMB No. 1545-0123</div>
+                <div class="d-yr">2024</div>
+              </div>
+            </div>
+            <div class="d-titlebar">U.S. Income Tax Return for an S Corporation</div>
+            <div class="d-sec">
+              <div class="d-slbl">Corporation Information</div>
+              <div class="d-tcr"><div class="d-tcc full"><div class="d-tcl">Corporation Name</div><div class="d-tcv" style="font-size:9px;font-weight:700;">ALLEN WAY ENTERPRISE LLC</div></div></div>
+              <div class="d-tcr">
+                <div class="d-tcc"><div class="d-tcl">EIN</div><div class="d-tcv">XX-XXX7967</div></div>
+                <div class="d-tcc"><div class="d-tcl">S-Election Date</div><div class="d-tcv">01/01/2024</div></div>
+              </div>
+              <div class="d-tcr">
+                <div class="d-tcc"><div class="d-tcl">Business Activity</div><div class="d-tcv">Construction · 236110</div></div>
+                <div class="d-tcc"><div class="d-tcl">Shareholders</div><div class="d-tcv">1 (100%)</div></div>
+              </div>
+              <div class="d-fw"><span class="d-fwl">Address</span><span class="d-fwv" style="font-size:6px;">1917 S Taylor Rd Ste 241, Cleveland Heights OH</span></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Income</div>
+              <div class="d-fr"><div class="d-fn">1c</div><div class="d-fl">Gross receipts or sales</div><div class="d-fv">783,023</div></div>
+              <div class="d-fr"><div class="d-fn">2</div><div class="d-fl">Cost of goods sold</div><div class="d-fv">(69,167)</div></div>
+              <div class="d-fr"><div class="d-fn">3</div><div class="d-fl">Gross profit</div><div class="d-fv">713,856</div></div>
+              <div class="d-fr"><div class="d-fn">5</div><div class="d-fl">Other income</div><div class="d-fv">1,941</div></div>
+              <div class="d-fr rl"><div class="d-fn">6</div><div class="d-fl">Total Income / (Loss)</div><div class="d-fv b">715,797</div></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Deductions</div>
+              <div class="d-fr"><div class="d-fn">7</div><div class="d-fl">Officer compensation</div><div class="d-fv">35,000</div></div>
+              <div class="d-fr"><div class="d-fn">8</div><div class="d-fl">Salaries and wages</div><div class="d-fv">29,085</div></div>
+              <div class="d-fr"><div class="d-fn">9</div><div class="d-fl">Repairs and maintenance</div><div class="d-fv">19,332</div></div>
+              <div class="d-fr sub"><div class="d-fn">20</div><div class="d-fl">Other deductions</div><div class="d-fv">575,317</div></div>
+              <div class="d-fr rl"><div class="d-fn">21</div><div class="d-fl">Total Deductions</div><div class="d-fv b">660,671</div></div>
+            </div>
+            <div class="d-fr fin"><div class="d-fn">22</div><div class="d-fl">Ordinary Business Income (K-1)</div><div class="d-fv b">$ 55,126</div></div>
+            <div class="d-ftr"><div class="d-ftrl">Preparer: Ahsaan Ali · EFIN Holder</div><div class="d-ftrp">PXXXXXXXX</div></div>
+          </div>
+          <div class="iso-edge-r"></div>
+          <div class="iso-edge-b"></div>
+        </div>
+        <div class="iso-label">
+          <div class="iso-label-form">Form 1120-S · 2024</div>
+          <div class="iso-label-name">Allen Way Enterprise LLC</div>
+          <div class="iso-label-det">S-Corp · $783K Revenue · Income $55,126</div>
+        </div>
+      </div>
+
+      <!-- 4. SCHEDULE SE -->
+      <div class="iso-scene">
+        <div class="iso-wrap">
+          <div class="iso-bp iso-bp2"></div>
+          <div class="iso-bp iso-bp1"></div>
+          <div class="iso-face">
+            <div class="d-head">
+              <div class="d-head-left"><div class="d-agency">Department of the Treasury<br>Internal Revenue Service</div></div>
+              <div class="d-head-right">
+                <div class="d-fnum" style="font-size:10px;">SCHEDULE SE</div>
+                <div style="font-family:var(--sans);font-size:7px;color:#444;text-align:right;">(Form 1040)</div>
+                <div class="d-omb">OMB No. 1545-0074</div>
+              </div>
+            </div>
+            <div class="d-titlebar">Self-Employment Tax · 2024</div>
+            <div class="d-sec">
+              <div class="d-slbl">Taxpayer</div>
+              <div class="d-nb">
+                <div class="d-nc"><div class="d-nclbl">Name (as shown on 1040)</div><div class="d-ncval">Smith JOHNSON</div></div>
+                <div class="d-nc"><div class="d-nclbl">SSN</div><div class="d-ncval">489-30-XXXX</div></div>
+              </div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Part I — Self-Employment Tax</div>
+              <div class="d-fr"><div class="d-fn">1a</div><div class="d-fl">Net farm profit or (loss)</div><div class="d-fv">0</div></div>
+              <div class="d-fr"><div class="d-fn">2</div><div class="d-fl">Net profit from Schedule C</div><div class="d-fv">71,800</div></div>
+              <div class="d-fr rl"><div class="d-fn">3</div><div class="d-fl">Combined lines 1a, 1b, and 2</div><div class="d-fv b">71,800</div></div>
+              <div class="d-fr"><div class="d-fn">4a</div><div class="d-fl">Line 3 × 92.35%</div><div class="d-fv">66,307</div></div>
+              <div class="d-fr hl"><div class="d-fn">4c</div><div class="d-fl">Combined lines 4a and 4b</div><div class="d-fv b">66,307</div></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Tax Computation</div>
+              <div class="d-fr"><div class="d-fn">7</div><div class="d-fl">Maximum SS wage base 2024</div><div class="d-fv">168,600</div></div>
+              <div class="d-fr"><div class="d-fn">8a</div><div class="d-fl">Total SS wages &amp; tips (W-2)</div><div class="d-fv">0</div></div>
+              <div class="d-fr"><div class="d-fn">10</div><div class="d-fl">Social security tax × 12.4%</div><div class="d-fv">8,222</div></div>
+              <div class="d-fr"><div class="d-fn">11</div><div class="d-fl">Medicare tax × 2.9%</div><div class="d-fv">1,923</div></div>
+              <div class="d-fr rl"><div class="d-fn">12</div><div class="d-fl">Self-Employment Tax</div><div class="d-fv b">10,145</div></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Deduction for Half of SE Tax</div>
+              <div class="d-fr"><div class="d-fn">13</div><div class="d-fl">Line 12 × 50% → Sch. 1, line 15</div><div class="d-fv">5,073</div></div>
+            </div>
+            <div class="d-fr fin"><div class="d-fn">12</div><div class="d-fl">SE Tax → Schedule 2, Line 4</div><div class="d-fv b">$ 10,145</div></div>
+            <div class="d-ftr"><div class="d-ftrl">Attached to 1040 · Smith Johnson · 489-30-XXXX</div><div class="d-ftrp">Seq. 17</div></div>
+          </div>
+          <div class="iso-edge-r"></div>
+          <div class="iso-edge-b"></div>
+        </div>
+        <div class="iso-label">
+          <div class="iso-label-form">Schedule SE · 2024</div>
+          <div class="iso-label-name">Smith Johnson</div>
+          <div class="iso-label-det">SE Tax $10,145 · Half Deduction $5,073</div>
+        </div>
+      </div>
+
+      <!-- 5. SCHEDULE K-1 -->
+      <div class="iso-scene">
+        <div class="iso-wrap">
+          <div class="iso-bp iso-bp2"></div>
+          <div class="iso-bp iso-bp1"></div>
+          <div class="iso-face">
+            <div class="d-head">
+              <div class="d-head-left"><div class="d-agency">Department of the Treasury<br>Internal Revenue Service</div></div>
+              <div class="d-head-right">
+                <div class="d-fnum" style="font-size:9px;text-align:right;">SCHEDULE K-1<br><span style="font-size:7px;font-weight:400;">(Form 1120-S)</span></div>
+                <div class="d-omb">OMB No. 1545-0123</div>
+                <div class="d-yr">2024</div>
+              </div>
+            </div>
+            <div class="d-titlebar">Shareholder's Share of Income, Deductions, Credits</div>
+            <div class="d-sec">
+              <div class="d-slbl">Part I — Corporation Information</div>
+              <div class="d-k1b">
+                <div class="d-k1n">ALLEN WAY ENTERPRISE LLC</div>
+                <div class="d-k1s">1917 S Taylor Rd Ste 241 · Cleveland Heights OH · EIN XX-XXX7967</div>
+              </div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Part II — Shareholder Information</div>
+              <div class="d-nb">
+                <div class="d-nc"><div class="d-nclbl">Shareholder Name</div><div class="d-ncval">Andre L. Allen</div></div>
+                <div class="d-nc"><div class="d-nclbl">SSN</div><div class="d-ncval">XXX-XX-0090</div></div>
+              </div>
+              <div class="d-fw"><span class="d-fwl">Address</span><span class="d-fwv" style="font-size:6px;">4407 Green Rd, Cleveland OH 44128</span></div>
+              <div class="d-pctr">
+                <div class="d-pcc"><div class="d-pcl">Allocation %</div><div class="d-pcv">100.00%</div></div>
+                <div class="d-pcc"><div class="d-pcl">Entity Type</div><div class="d-pcv">S-Corp</div></div>
+                <div class="d-pcc"><div class="d-pcl">Shares EOY</div><div class="d-pcv">1</div></div>
+              </div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Part III — Pro Rata Share Items</div>
+              <div class="d-fr rl"><div class="d-fn">1</div><div class="d-fl">Ordinary business income / (loss)</div><div class="d-fv b">55,126</div></div>
+              <div class="d-fr"><div class="d-fn">2</div><div class="d-fl">Net rental real estate income</div><div class="d-fv">0</div></div>
+              <div class="d-fr"><div class="d-fn">16c</div><div class="d-fl">Nondeductible expenses</div><div class="d-fv">2,056</div></div>
+              <div class="d-fr"><div class="d-fn">17V</div><div class="d-fl">Other information (code V)</div><div class="d-fv">84,211</div></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Shareholder Basis Computation</div>
+              <div class="d-fr"><div class="d-fn">1</div><div class="d-fl">Stock basis — beginning of year</div><div class="d-fv">0</div></div>
+              <div class="d-fr"><div class="d-fn">2</div><div class="d-fl">Capital contributions</div><div class="d-fv">4,978</div></div>
+              <div class="d-fr sub"><div class="d-fn">3</div><div class="d-fl">Ordinary income (increases basis)</div><div class="d-fv">55,126</div></div>
+              <div class="d-fr sub"><div class="d-fn">14</div><div class="d-fl">Nondeductible (decreases)</div><div class="d-fv">(2,056)</div></div>
+            </div>
+            <div class="d-fr fin"><div class="d-fn">36</div><div class="d-fl">Shareholder Basis — End of Year</div><div class="d-fv b">$ 58,048</div></div>
+            <div class="d-ftr"><div class="d-ftrl">Allen Way Enterprise LLC · Andre Allen 100%</div><div class="d-ftrp">Client Copy</div></div>
+          </div>
+          <div class="iso-edge-r"></div>
+          <div class="iso-edge-b"></div>
+        </div>
+        <div class="iso-label">
+          <div class="iso-label-form">Schedule K-1 (1120-S) · 2024</div>
+          <div class="iso-label-name">Andre L. Allen — 100%</div>
+          <div class="iso-label-det">Income $55,126 · Basis EOY $58,048</div>
+        </div>
+      </div>
+
+      <!-- 6. OHIO IT 4708 -->
+      <div class="iso-scene">
+        <div class="iso-wrap">
+          <div class="iso-bp iso-bp2"></div>
+          <div class="iso-bp iso-bp1"></div>
+          <div class="iso-face">
+            <div class="d-head">
+              <div class="d-head-left"><div class="d-agency">Ohio Department of Taxation<br>Columbus, Ohio</div></div>
+              <div class="d-head-right">
+                <div class="d-fnum" style="font-size:9px;text-align:right;">Ohio IT 4708</div>
+                <div class="d-yr">2024</div>
+              </div>
+            </div>
+            <div class="d-titlebar">Pass-Through Entity Composite Return · Ohio</div>
+            <div class="d-sec">
+              <div class="d-slbl">Entity Information</div>
+              <div class="d-tcr"><div class="d-tcc full"><div class="d-tcl">Pass-Through Entity Name</div><div class="d-tcv" style="font-size:9px;font-weight:700;">ALLEN WAY ENTERPRISE LLC</div></div></div>
+              <div class="d-tcr">
+                <div class="d-tcc"><div class="d-tcl">FEIN</div><div class="d-tcv">XX-XXX7967</div></div>
+                <div class="d-tcc"><div class="d-tcl">Entity Type</div><div class="d-tcv">S Corporation</div></div>
+              </div>
+              <div class="d-tcr">
+                <div class="d-tcc"><div class="d-tcl">Reporting Period</div><div class="d-tcv">01/01/24 – 12/31/24</div></div>
+                <div class="d-tcc"><div class="d-tcl">Investor Count</div><div class="d-tcv">1 · Andre L. Allen</div></div>
+              </div>
+              <div class="d-fw"><span class="d-fwl">Address</span><span class="d-fwv" style="font-size:6px;">1917 S Taylor Rd Ste 241, Cleveland Heights OH</span></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Schedule I — Taxable Income</div>
+              <div class="d-fr rl"><div class="d-fn">1</div><div class="d-fl">Total income / (loss)</div><div class="d-fv b">55,126</div></div>
+              <div class="d-fr"><div class="d-fn">2</div><div class="d-fl">Total deductions</div><div class="d-fv">0</div></div>
+              <div class="d-fr"><div class="d-fn">3</div><div class="d-fl">Income to allocate &amp; apportion</div><div class="d-fv">55,126</div></div>
+              <div class="d-fr"><div class="d-fn">5</div><div class="d-fl">Apportionable income</div><div class="d-fv">55,126</div></div>
+            </div>
+            <div class="d-sec">
+              <div class="d-slbl">Schedule IV — Ohio Apportionment</div>
+              <div class="d-fr"><div class="d-fn">42c</div><div class="d-fl">Property (Ohio / total)</div><div class="d-fv">0 / 0</div></div>
+              <div class="d-fr"><div class="d-fn">43</div><div class="d-fl">Payroll (Ohio / total)</div><div class="d-fv">0 / 0</div></div>
+              <div class="d-fr"><div class="d-fn">44</div><div class="d-fl">Sales (Ohio / total)</div><div class="d-fv">0 / 0</div></div>
+              <div class="d-fr rl"><div class="d-fn">45</div><div class="d-fl">Ohio Apportionment Ratio</div><div class="d-fv b">0.000000</div></div>
+              <div class="d-fr"><div class="d-fn">7</div><div class="d-fl">Income apportioned to Ohio</div><div class="d-fv">0</div></div>
+              <div class="d-fr hl"><div class="d-fn">9</div><div class="d-fl">Ohio taxable income</div><div class="d-fv b">0</div></div>
+            </div>
+            <div class="d-fr fin"><div class="d-fn">26</div><div class="d-fl">Total Amount Due — Ohio IT 4708</div><div class="d-fv b">$ 0.00</div></div>
+            <div class="d-ftr"><div class="d-ftrl">Officer: Ahsaan Ali · EFIN Holder</div><div class="d-ftrp">09/30/2025</div></div>
+          </div>
+          <div class="iso-edge-r"></div>
+          <div class="iso-edge-b"></div>
+        </div>
+        <div class="iso-label">
+          <div class="iso-label-form">Ohio IT 4708 · 2024</div>
+          <div class="iso-label-name">Allen Way Enterprise LLC</div>
+          <div class="iso-label-det">PTE Composite Return · $0 Ohio Tax Due</div>
+        </div>
+      </div>
+
+    </div><!-- /mockup-grid -->
+  </div>
+</section>
+
+<!-- ==================== WHY ME ==================== -->
+<section class="why-me section reveal" id="why">
+  <div class="container">
+    <div style="text-align:center;max-width:550px;margin:0 auto 56px;">
+      <p class="section-label">Why Choose Ahsaan</p>
+      <h2 class="section-heading">I don't do <em>volume.</em> I do it right.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">👤</div>
+        <div>
+          <h4>You Talk to Me. Period.</h4>
+          <p>No assistants screening your calls. No interns reviewing your return. The person answering your questions is the same person filing your taxes.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <div>
+          <h4>Fast Replies. Plain English.</h4>
+          <p>You won't wait days for a callback. And when I explain something, you'll actually understand it. No jargon, no runaround.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔒</div>
+        <div>
+          <h4>Your Information Stays Locked.</h4>
+          <p>Secure document handling with strict privacy standards. Your financials are treated with the same care I'd give my own.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📅</div>
+        <div>
+          <h4>I Don't Vanish After April.</h4>
+          <p>IRS notice in July? Quarterly estimate due in September? I'm here. Year-round. Not just during filing season.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TOOLS ==================== -->
+<section class="tools section reveal">
+  <div class="container">
+    <div class="tools-header">
+      <p class="section-label">Tools & Software</p>
+      <h2 class="section-heading">The <em>tools</em> behind the work.</h2>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-chip"><div class="tool-chip-dot"></div>Drake Tax</div>
+      <div class="tool-chip"><div class="tool-chip-dot"></div>QuickBooks Online</div>
+      <div class="tool-chip"><div class="tool-chip-dot"></div>Tax ProLink</div>
+      <div class="tool-chip"><div class="tool-chip-dot"></div>Wave</div>
+      <div class="tool-chip"><div class="tool-chip-dot"></div>Zoho Books</div>
+      <div class="tool-chip"><div class="tool-chip-dot"></div>Microsoft Excel</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta section reveal" id="contact">
+  <div class="container">
+    <div class="cta-box">
+      <p class="section-label">Let's Talk</p>
+      <h2>Not sure where you stand? <em>Let's find out.</em></h2>
+      <p>Send me your last return or your messy books. I'll review them for free and tell you exactly what needs fixing. No strings. No pressure.</p>
+      <div class="cta-actions">
+        <a href="mailto:youremail@email.com" class="btn-primary">
+          <span>Schedule Free Review</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn-secondary">
+          <span>Connect on LinkedIn</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+        </a>
+      </div>
+      <p class="cta-free"><span>✦</span> Every engagement starts with a free consultation. Fees are discussed before work begins.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">Ahsaan<span>.</span></a>
+        <p>US Tax Preparer · Accountant · Bookkeeping Professional. IRS-registered with EFIN, PTIN, AFSP &amp; NYTPRIN credentials.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="#services">Tax Preparation</a>
+          <a href="#services">Bookkeeping</a>
+          <a href="#services">IRS Services</a>
+          <a href="#services">Tax Planning</a>
+          <a href="#portfolio">Portfolio</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="mailto:youremail@email.com">youremail@email.com</a>
+          <a href="tel:+1XXXXXXXXXX">+1 (XXX) XXX-XXXX</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ahsaan Ali. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Client Engagement Letter</a>
+        <a href="#">Confidentiality &amp; Data Privacy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+// ── TAX DATA CANVAS BACKGROUND ──────────────────────────────────────────────
+(function () {
+  const canvas = document.getElementById('tax-canvas');
+  const ctx = canvas.getContext('2d');
+
+  // Tax-world vocabulary — the particles render these faintly in the background
+  const TERMS = [
+    'Form 1040', 'Schedule C', '1120-S', 'Schedule SE', 'K-1', 'Ohio IT 4708',
+    'AGI', 'QBI', 'PTIN', 'EFIN', 'AFSP', 'W-2', 'EIN', '1065', '1040-NR',
+    '$72,000', '$138,727', '$96,182', '$3,200', '$783,023', '$55,126',
+    '$58,048', '$71,800', '$10,145', '$29,200', '$13,345', '92.35%',
+    '12.4%', '2.9%', 'Refund', 'E-Filed', 'Deduction', 'Withholding',
+    'Taxable Income', 'Gross Profit', 'Net Profit', 'Ordinary Income',
+    'Standard Deduction', 'MFJ', 'S-Corp', 'Sole Proprietor', 'Pass-Through',
+    'OMB 1545-0074', 'Schedule 1', 'Schedule 2', 'Form 8995', 'Form 1125-A',
+    'Line 15', 'Line 22', 'Line 35a', 'Seq. 09', 'Seq. 17', 'NYTPRIN',
+  ];
+
+  let particles = [];
+  let W, H;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function makeParticle() {
+    const size = 10 + Math.random() * 5;   // font size 10–15px — readable but quiet
+    return {
+      text:    TERMS[Math.floor(Math.random() * TERMS.length)],
+      x:       Math.random() * W,
+      y:       H + 20,                       // start just below the fold
+      vy:      -(0.18 + Math.random() * 0.28), // slow upward drift
+      vx:      (Math.random() - 0.5) * 0.08, // very slight lateral wobble
+      size,
+      alpha:   0,
+      alphaTarget: 0.038 + Math.random() * 0.042, // max opacity 3.8–8%
+      fadeIn:  true,
+      life:    0,
+      maxLife: 420 + Math.random() * 380,
+    };
+  }
+
+  function init() {
+    resize();
+    // Seed with evenly distributed starting positions
+    for (let i = 0; i < 46; i++) {
+      const p = makeParticle();
+      p.y = Math.random() * H;   // scatter across full height at start
+      p.life = Math.random() * p.maxLife;
+      p.alpha = p.alphaTarget * (p.life / p.maxLife < 0.5 ? (p.life / p.maxLife) * 2 : 2 - (p.life / p.maxLife) * 2);
+      particles.push(p);
+    }
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+
+    // Spawn new if below target count
+    while (particles.length < 48) particles.push(makeParticle());
+
+    ctx.font = `300 12px 'DM Sans', monospace`;
+
+    particles.forEach((p, idx) => {
+      p.life++;
+      p.x += p.vx;
+      p.y += p.vy;
+
+      const halfLife = p.maxLife * 0.5;
+      if (p.life < halfLife) {
+        p.alpha = p.alphaTarget * (p.life / halfLife);
+      } else {
+        p.alpha = p.alphaTarget * (1 - (p.life - halfLife) / halfLife);
+      }
+
+      if (p.life >= p.maxLife || p.y < -30) {
+        particles.splice(idx, 1);
+        return;
+      }
+
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, p.alpha);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = `300 ${p.size}px 'DM Sans', monospace`;
+      ctx.fillText(p.text, p.x, p.y);
+      ctx.restore();
+    });
+
+    requestAnimationFrame(tick);
+  }
+
+  window.addEventListener('resize', resize);
+  init();
+  tick();
+})();
+
+// ── SCROLL REVEAL ───────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // Staggered card entrances
+  document.querySelectorAll('.services-grid .service-card, .stats-grid .stat-card, .why-grid .why-card, .mockup-grid .iso-scene').forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = `all 0.6s cubic-bezier(0.23,1,0.32,1) ${i * 0.1}s`;
+  });
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.05 });
+  document.querySelectorAll('.service-card, .stat-card, .why-card, .iso-scene').forEach(c => cardObserver.observe(c));
+
+  // Nav opacity on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.background = window.scrollY > 100 ? 'rgba(10,10,10,0.95)' : 'rgba(10,10,10,0.8)';
+  });
+
+  // Subtle mouse parallax on canvas glow only — no shape divs needed
+  window.addEventListener('mousemove', (e) => {
+    const glow = document.querySelector('.hero-glow');
+    if (!glow) return;
+    const x = (e.clientX / window.innerWidth - 0.5) * 30;
+    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    glow.style.transform = `translateX(calc(-50% + ${x}px)) translateY(${y}px)`;
+  });
+});
+</script>
+</body>
+</html>
