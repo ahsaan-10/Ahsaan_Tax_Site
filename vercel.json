@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/ahsaan-tax-site.html" }
+  ]
+}
